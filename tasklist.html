@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>腾讯Q币宝-任务中心</title>
+	<meta name="keywords" content="腾讯,QB,网络赚钱" />
+  <meta name="description" content="腾讯Q币宝,一款网络赚钱的网站,51qb.qq.com，谐音我要Q币，无忧Q币!" />
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<style>
+		.act{
+			background: #2b85e4;
+		}
+		#nav .act .photo{
+			background: url('images/f2.png') no-repeat center;
+		}
+	</style>
+</head>
+<body>
+	<div id="head">
+		<div class="clearfix content">
+			<img src="images/logo.png">
+			<button>登 录</button>
+		</div>
+	</div>
+	<div id="banner"></div>
+	<div id="nav">
+		<div class="content">
+			<ul class="clearfix nav_nav">
+				<a href="index.html">
+					<li class="a1">
+						<div class="photo"></div>
+						<div class="text">首页</div>
+					</li>
+				</a>
+				<a href="tasklist.html">
+					<li class="a2 act">
+						<div class="photo"></div>
+						<div class="text">任务中心</div>
+					</li>
+				</a>
+				<a href="userCenter.html">
+					<li class="a3">
+						<div class="photo"></div>
+						<div class="text">个人中心</div>
+					</li>
+				</a>
+				<a href="itemsList.html">
+					<li class="a4">
+						<div class="photo"></div>
+						<div class="text">积分商城</div>
+					</li>
+				</a>
+				<a href="notice.html">
+					<li class="a5">
+						<div class="photo"></div>
+						<div class="text">帮助与公告</div>
+					</li>
+				</a>
+			</ul>
+			<div id="biaodan">
+				<form>
+					<p>任务类型:</p>
+					<div id="wl">
+						<span id="span"> &nbsp;请选择 </span><img id="jian" src="images/箭头 下.png">
+						<ul id="xia">
+							<li>全部</li>
+							<li>链接转发</li>
+							<li>产品体验</li>
+							<li>内容原创</li>
+							<li>人员招募</li>
+							<li>线下推广</li>
+						</ul>
+					</div>
+					<p>任务名称:</p>
+					<input type="text" placeholder=" &nbsp; 请输入...">
+					<button>搜 索</button>
+				</form>
+			</div>
+			<div id="touming">
+				<div class="content">
+					<ul class="clearfix">
+						<a href="tasklist1.html">
+							<li>
+								<div class="oto"><img src="images/c1.png"></div>
+								<p>鹿晗喊你跟着兴趣走走走下去</p>
+								<section>1积分/次<span>有效期至：2017.08.31</span></section>
+							</li>
+						</a>
+						<a href="tasklist1.html">
+							<li>
+								<div class="oto"><img src="images/c2.png"></div>
+								<p>原创小能手招募</p>
+								<section>2000积分/次<span>有效期至：2017.08.31</span></section>
+							</li>
+						</a>
+						<a href="tasklist1.html">
+							<li>
+								<div class="oto"><img src="images/c3.png"></div>
+								<p>最燃主播养成计划</p>
+								<section>10000积分/次<span>有效期至：2017.08.31</span></section>
+							</li>
+						</a>
+						<a href="tasklist1.html">
+							<li>
+								<div class="oto"><img src="images/a3.jpg"></div>
+								<p>书评达人火热招募中</p>
+								<section>2000积分/次<span>有效期至：2017.08.31</span></section>
+							</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="content">
+			<p>联系我们 <img src="images/QQ.png"> <img src="images/YX.png"></p>
+			<p class="ban">Copyright © 2017 Tencent.All Rights Reserved. 腾讯公司 版权所有</p>
+		</div>
+	</div>
+	<script src="js/js.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script>
+		$('#wl').click(function(){
+			$('#xia').slideToggle(500);
+			$(this).toggleClass('act');
+		})
+		$(document).click(function(event) {
+			if($('#wl')[0]!=event.target && $('#wl img')[0]!=event.target){
+				$('#wl').removeClass('act');
+				$('#xia').slideUp(500);
+			}
+		});
+		$('#xia li').click(function() {
+			$('#span').text($(this).text()).css({
+				color:'#000',
+				paddingLeft:'15px'
+			});
+		});
+	</script>
+</body>
+</html>
